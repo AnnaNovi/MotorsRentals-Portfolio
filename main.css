@@ -9,7 +9,7 @@
   text-decoration: none; }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   padding: 0 150px;
   margin: 0 auto; }
 
@@ -32,6 +32,31 @@ a {
   text-decoration: none;
   border: none;
   background: transparent; }
+
+h1 {
+  font-family: "OpenSansEB";
+  font-size: 70px;
+  line-height: 95px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin-bottom: 47px; }
+
+h2 {
+  font-family: "OpenSansB";
+  font-size: 38px;
+  line-height: 52px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center; }
+
+h3 {
+  font-family: "RobotoM";
+  font-size: 38px;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center; }
 
 @font-face {
   font-family: "OpenSansR";
@@ -103,10 +128,230 @@ a {
   font-weight: 500;
   font-style: normal; }
 
+.tours {
+  padding: 20px 0 30px 0;
+  display: flex; }
+
+.tours-img {
+  object-fit: cover; }
+
+.tours-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-right: 65px; }
+
+.tours-desc__title {
+  font-family: "RobotoM";
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.05em; }
+
+.tours-desc__desc {
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.03em; }
+
+.tours-desc__feats {
+  display: flex; }
+
+.tours-desc__feat {
+  display: flex;
+  align-items: center;
+  margin-right: 50px; }
+  .tours-desc__feat svg {
+    width: 24px;
+    height: 24px; }
+    .tours-desc__feat svg use {
+      fill: #7a7363; }
+  .tours-desc__feat span {
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.03em; }
+
+.tours-btns {
+  min-width: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+  .tours-btns a,
+  .tours-btns button {
+    font-family: "RobotoM";
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #7a7363;
+    border: 1px solid #7a7363;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 0; }
+    .tours-btns a:hover,
+    .tours-btns button:hover {
+      background: #d2ccbe; }
+  .tours-btns button {
+    color: #ffffff;
+    background: #7a7363; }
+
+.tours__hr {
+  border: 1px solid #e8e6e6;
+  width: calc(100% + 140px);
+  margin-left: -70px; }
+  .tours__hr:last-child {
+    display: none; }
+
+.reviews__slide {
+  display: flex;
+  width: 619px; }
+
+.review__img {
+  object-fit: cover; }
+
+.review__desc {
+  padding: 20px;
+  background: rgba(210, 204, 190, 0.6); }
+
+.review__name {
+  font-family: "OpenSansSB";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.06em; }
+
+.review__review {
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.03em; }
+
 /*Основные цвета
 #414141 - черный
 #7A7363 - песочныйы
 */
+/*Шрифты
+OpenSansR - 400
+OpenSansSB - 600
+OpenSansB - 700
+OpenSansEB - 800
+RobotoB - 700
+RobotoM - 500
+RobotoR - 400
+RobotoT - 100
+MontserratB - 700
+MontserratM - 500
+*/
+section.title {
+  height: 660px;
+  background: linear-gradient(0deg, rgba(65, 65, 65, 0.25), rgba(65, 65, 65, 0.25)), url(resrc/images/bg-title.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  section.title .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  section.title a {
+    background: #ffffff;
+    font-family: "RobotoM";
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #7a7363;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px; }
+    section.title a:hover {
+      background: rgba(255, 255, 255, 0.8); }
+    section.title a svg {
+      width: 23px;
+      height: 15px;
+      margin-left: 5px; }
+      section.title a svg use {
+        fill: #7a7363; }
+
+.all-tours {
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+  background: #e8e6e6;
+  font-family: "OpenSansB";
+  font-size: 38px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7a7363; }
+  .all-tours:hover {
+    background: #d2ccbe;
+    color: #ffffff; }
+    .all-tours:hover svg use {
+      fill: white; }
+  .all-tours svg {
+    width: 35px;
+    height: 20px; }
+    .all-tours svg use {
+      fill: #7a7363; }
+
+section.reviews {
+  padding-bottom: 86px; }
+  section.reviews .swiper-slide {
+    opacity: 0.2;
+    margin-top: 0px; }
+    section.reviews .swiper-slide.swiper-slide-active {
+      opacity: 1;
+      margin-top: 52px; }
+  section.reviews .swiper-pagination-fraction {
+    bottom: 60px;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    width: fit-content; }
+  section.reviews .swiper-pagination-current {
+    font-family: "RobotoB";
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    color: #7a7363;
+    margin-left: -30px; }
+    section.reviews .swiper-pagination-current::before {
+      content: "0"; }
+  section.reviews .swiper-pagination-total {
+    font-family: "RobotoT";
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    color: #414141;
+    margin-left: 20px; }
+    section.reviews .swiper-pagination-total::before {
+      content: "0"; }
+  section.reviews .swiper-pagination-between {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+    border: 1px solid #7a7363;
+    width: 42px;
+    transform: rotate(143deg); }
+  section.reviews .swiper-button-prev,
+  section.reviews .swiper-button-next {
+    width: fit-content;
+    height: fit-content;
+    bottom: 0;
+    top: initial; }
+    section.reviews .swiper-button-prev::after,
+    section.reviews .swiper-button-next::after {
+      opacity: 0; }
+    section.reviews .swiper-button-prev svg,
+    section.reviews .swiper-button-next svg {
+      width: 83px;
+      height: 40px;
+      fill: #7a7363; }
+  section.reviews .swiper-button-prev {
+    transform: rotate(180deg); }
+
 header,
 .footer-nav {
   padding: 32px 80px;
