@@ -1,0 +1,526 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Motors</title><link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/><style> /*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss ***!
+  \********************************************************************************************************/
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none; }
+
+.container {
+  max-width: 1440px;
+  padding: 0 150px;
+  margin: 0 auto; }
+
+body {
+  font-family: "OpenSansR";
+  color: #414141; }
+
+*:focus {
+  outline: webkit focus ring color auto 0px !important; }
+
+ul {
+  padding-left: 0; }
+  ul li {
+    list-style-type: none; }
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  border: none;
+  background: transparent; }
+
+h1 {
+  font-family: "OpenSansEB";
+  font-size: 70px;
+  line-height: 95px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin-bottom: 47px; }
+
+h2 {
+  font-family: "OpenSansB";
+  font-size: 38px;
+  line-height: 52px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center; }
+
+h3 {
+  font-family: "RobotoM";
+  font-size: 38px;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center; }
+
+@font-face {
+  font-family: "OpenSansR";
+  src: url(resrc/fonts/OpenSansRegular.eot);
+  src: url(resrc/fonts/OpenSansRegular.woff) format("woff"), url(resrc/fonts/OpenSansRegular.woff2) format("woff2"), url(resrc/fonts/OpenSansRegular.ttf) format("truetype"), url(resrc/icons/OpenSansRegular.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "OpenSansSB";
+  src: url(resrc/fonts/OpenSansSemiBold.eot);
+  src: url(resrc/fonts/OpenSansSemiBold.woff) format("woff"), url(resrc/fonts/OpenSansSemiBold.woff2) format("woff2"), url(resrc/fonts/OpenSansSemiBold.ttf) format("truetype"), url(resrc/icons/OpenSansSemiBold.svg) format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: "OpenSansB";
+  src: url(resrc/fonts/OpenSansBold.eot);
+  src: url(resrc/fonts/OpenSansBold.woff) format("woff"), url(resrc/fonts/OpenSansBold.woff2) format("woff2"), url(resrc/fonts/OpenSansBold.ttf) format("truetype"), url(resrc/icons/OpenSansBold.svg) format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "OpenSansEB";
+  src: url(resrc/fonts/OpenSansExtraBold.eot);
+  src: url(resrc/fonts/OpenSansExtraBold.woff) format("woff"), url(resrc/fonts/OpenSansExtraBold.woff2) format("woff2"), url(resrc/fonts/OpenSansExtraBold.ttf) format("truetype"), url(resrc/icons/OpenSansExtraBold.svg) format("svg");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: "RobotoB";
+  src: url(resrc/fonts/Roboto-Bold.eot);
+  src: url(resrc/fonts/Roboto-Bold.woff) format("woff"), url(resrc/fonts/Roboto-Bold.otf) format("opentype"), url(resrc/fonts/Roboto-Bold.ttf) format("truetype"), url(resrc/icons/Roboto-Bold.svg) format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "RobotoM";
+  src: url(resrc/fonts/Roboto-Medium.eot);
+  src: url(resrc/fonts/Roboto-Medium.woff) format("woff"), url(resrc/fonts/Roboto-Medium.otf) format("opentype"), url(resrc/fonts/Roboto-Medium.ttf) format("truetype"), url(resrc/icons/Roboto-Medium.svg) format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "RobotoR";
+  src: url(resrc/fonts/Roboto-Regular.eot);
+  src: url(resrc/fonts/Roboto-Regular.woff) format("woff"), url(resrc/fonts/Roboto-Regular.otf) format("opentype"), url(resrc/fonts/Roboto-Regular.ttf) format("truetype"), url(resrc/icons/Roboto-Regular.svg) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "RobotoT";
+  src: url(resrc/fonts/Roboto-Thin.eot);
+  src: url(resrc/fonts/Roboto-Thin.woff) format("woff"), url(resrc/fonts/Roboto-Thin.otf) format("opentype"), url(resrc/fonts/Roboto-Thin.ttf) format("truetype"), url(resrc/icons/Roboto-Thin.svg) format("svg");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MontserratB";
+  src: url(resrc/fonts/Montserrat-Bold.eot);
+  src: url(resrc/fonts/Montserrat-Bold.woff) format("woff"), url(resrc/fonts/Montserrat-Bold.otf) format("opentype"), url(resrc/fonts/Montserrat-Bold.ttf) format("truetype"), url(resrc/icons/Montserrat-Bold.svg) format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MontserratM";
+  src: url(resrc/fonts/Montserrat-Medium.eot);
+  src: url(resrc/fonts/Montserrat-Medium.woff) format("woff"), url(resrc/fonts/Montserrat-Medium.otf) format("opentype"), url(resrc/fonts/Montserrat-Medium.ttf) format("truetype"), url(resrc/icons/Montserrat-Medium.svg) format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+.tours {
+  padding: 20px 0 30px 0;
+  display: flex; }
+
+.tours-img {
+  object-fit: cover; }
+
+.tours-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-right: 65px; }
+
+.tours-desc__title {
+  font-family: "RobotoM";
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.05em; }
+
+.tours-desc__desc {
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.03em; }
+
+.tours-desc__feats {
+  display: flex; }
+
+.tours-desc__feat {
+  display: flex;
+  align-items: center;
+  margin-right: 50px; }
+  .tours-desc__feat svg {
+    width: 24px;
+    height: 24px; }
+    .tours-desc__feat svg use {
+      fill: #7a7363; }
+  .tours-desc__feat span {
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.03em; }
+
+.tours-btns {
+  min-width: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+  .tours-btns a,
+  .tours-btns button {
+    font-family: "RobotoM";
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #7a7363;
+    border: 1px solid #7a7363;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 0; }
+    .tours-btns a:hover,
+    .tours-btns button:hover {
+      background: #d2ccbe; }
+  .tours-btns button {
+    color: #ffffff;
+    background: #7a7363; }
+
+.tours__hr {
+  border: 1px solid #e8e6e6;
+  width: calc(100% + 140px);
+  margin-left: -70px; }
+  .tours__hr:last-child {
+    display: none; }
+
+.reviews__slide {
+  display: flex;
+  width: 619px; }
+
+.review__img {
+  object-fit: cover; }
+
+.review__desc {
+  padding: 20px;
+  background: rgba(210, 204, 190, 0.6); }
+
+.review__name {
+  font-family: "OpenSansSB";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.06em; }
+
+.review__review {
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.03em; }
+
+/*Основные цвета
+#414141 - черный
+#7A7363 - песочныйы
+*/
+/*Шрифты
+OpenSansR - 400
+OpenSansSB - 600
+OpenSansB - 700
+OpenSansEB - 800
+RobotoB - 700
+RobotoM - 500
+RobotoR - 400
+RobotoT - 100
+MontserratB - 700
+MontserratM - 500
+*/
+section.title {
+  height: 660px;
+  background: linear-gradient(0deg, rgba(65, 65, 65, 0.25), rgba(65, 65, 65, 0.25)), url(resrc/images/bg-title.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  section.title .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  section.title a {
+    background: #ffffff;
+    font-family: "RobotoM";
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #7a7363;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px; }
+    section.title a:hover {
+      background: rgba(255, 255, 255, 0.8); }
+    section.title a svg {
+      width: 23px;
+      height: 15px;
+      margin-left: 5px; }
+      section.title a svg use {
+        fill: #7a7363; }
+
+.all-tours {
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+  background: #e8e6e6;
+  font-family: "OpenSansB";
+  font-size: 38px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7a7363; }
+  .all-tours:hover {
+    background: #d2ccbe;
+    color: #ffffff; }
+    .all-tours:hover svg use {
+      fill: white; }
+  .all-tours svg {
+    width: 35px;
+    height: 20px; }
+    .all-tours svg use {
+      fill: #7a7363; }
+
+section.reviews {
+  padding-bottom: 86px; }
+  section.reviews .swiper-slide {
+    opacity: 0.2;
+    margin-top: 0px; }
+    section.reviews .swiper-slide.swiper-slide-active {
+      opacity: 1;
+      margin-top: 52px; }
+  section.reviews .swiper-pagination-fraction {
+    bottom: 60px;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    width: fit-content; }
+  section.reviews .swiper-pagination-current {
+    font-family: "RobotoB";
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    color: #7a7363;
+    margin-left: -30px; }
+    section.reviews .swiper-pagination-current::before {
+      content: "0"; }
+  section.reviews .swiper-pagination-total {
+    font-family: "RobotoT";
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    color: #414141;
+    margin-left: 20px; }
+    section.reviews .swiper-pagination-total::before {
+      content: "0"; }
+  section.reviews .swiper-pagination-between {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+    border: 1px solid #7a7363;
+    width: 42px;
+    transform: rotate(143deg); }
+  section.reviews .swiper-button-prev,
+  section.reviews .swiper-button-next {
+    width: fit-content;
+    height: fit-content;
+    bottom: 0;
+    top: initial; }
+    section.reviews .swiper-button-prev::after,
+    section.reviews .swiper-button-next::after {
+      opacity: 0; }
+    section.reviews .swiper-button-prev svg,
+    section.reviews .swiper-button-next svg {
+      width: 83px;
+      height: 40px;
+      fill: #7a7363; }
+  section.reviews .swiper-button-prev {
+    transform: rotate(180deg); }
+
+section.choose-excur .btns-line {
+  margin-bottom: 30px; }
+  section.choose-excur .btns-line button {
+    width: 50%;
+    padding: 15px 0;
+    font-family: "OpenSansB";
+    font-size: 38px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #7a7363;
+    background: #e8e6e6; }
+    section.choose-excur .btns-line button:hover {
+      background: #d2ccbe;
+      color: #ffffff; }
+    section.choose-excur .btns-line button.active {
+      color: #414141;
+      background: none; }
+
+.page-contacts-map {
+  margin-bottom: -5px;
+  margin-top: -5px; }
+
+section.info-contacts {
+  display: flex;
+  justify-content: space-between; }
+  section.info-contacts img {
+    height: 500px;
+    width: 60%;
+    object-fit: cover; }
+  section.info-contacts .contacts {
+    margin: 60px 80px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  section.info-contacts .contacts__title {
+    font-family: "RobotoM";
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #7a7363; }
+  section.info-contacts .contacts__phone {
+    font-family: "OpenSansB";
+    font-size: 38px;
+    line-height: 52px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase; }
+    section.info-contacts .contacts__phone a {
+      display: block; }
+  section.info-contacts .contacts__mail {
+    font-family: "RobotoM";
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: 0.05em; }
+  section.info-contacts .contacts__descr {
+    font-family: "OpenSansSB";
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.06em; }
+  section.info-contacts .contacts__net svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    fill: #414141; }
+    section.info-contacts .contacts__net svg:last-child {
+      margin-right: 0px; }
+
+section.faq .qa-block {
+  margin-top: 30px;
+  margin-bottom: 55px; }
+
+section.faq .qa-line {
+  padding: 25px 10px; }
+
+section.faq .quest {
+  font-family: "OpenSansSB";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  section.faq .quest svg {
+    width: 24px;
+    height: 14px;
+    fill: #7a7363;
+    transform: rotate(180deg); }
+
+section.faq .answ {
+  display: none;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.03em; }
+
+header,
+.footer-nav {
+  padding: 32px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header nav a,
+  .footer-nav nav a {
+    margin-right: 65px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 19px; }
+    header nav a:last-child,
+    .footer-nav nav a:last-child {
+      margin-right: 0; }
+    header nav a:hover,
+    .footer-nav nav a:hover {
+      color: #7a7363; }
+    header nav a.active,
+    .footer-nav nav a.active {
+      text-decoration: underline; }
+
+footer .contacts-map {
+  display: flex; }
+
+footer .footer-nav {
+  background: rgba(210, 204, 190, 0.6); }
+
+footer .contacts {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 40px 40px 40px 80px;
+  width: 411px;
+  height: 350px;
+  background-image: linear-gradient(0deg, rgba(122, 115, 99, 0.7), rgba(122, 115, 99, 0.7)), url(resrc/images/bg-contacts.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+footer .contacts__title {
+  font-family: "OpenSansSB";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.06em; }
+
+footer .contacts__descr {
+  font-size: 14px;
+  line-height: 19px; }
+
+footer .contacts__phone {
+  font-family: "RobotoM";
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.05em; }
+  footer .contacts__phone a {
+    display: block; }
+
+footer .contacts__mail {
+  font-size: 14px;
+  line-height: 19px; }
+
+footer .contacts__net svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px; }
+  footer .contacts__net svg:last-child {
+    margin-right: 0px; }
+  footer .contacts__net svg use {
+    fill: white; }
+
+footer iframe {
+  width: calc(100% - 350px); }
+
+</style></head><body> <header> <img src="resrc/icons/logo.svg" alt=""><nav> <a class="active" href="">HOME</a><a href="">BOOK ONLINE</a><a href="">GALLERY</a><a href="">CONTACTS</a><a href="">FAQ</a></nav><a class="phone" href="tel:+35712345678">+ 357 12345678</a></header><main> <section class="choose-excur" id="choose-excur"><div class="btns-line"><button class="active" id="btn-excur">excursions </button><button id="btn-rental">Rental vehicles</button></div><div class="container"> <div class="active" id="excur-block"> <div class="tours-list"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/tour.jpeg" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Guided Desert Quad Safari Tour (350CC)</div><div class="tours-desc__desc">Guided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drive 1hr Quad tour, sandboarding,camel ride BBQ,live showf drive 1hr Quad tour, sandboarding,camel ride BBQ,live showGuided self drid self drid self driv...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="calendar icon"><use xlink:href="resrc/icons/sprite.svg#calendar"></use></svg><span>Offered Daily</span></div><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"></div></div><div id="rental-block" style="display:none;"><div class="tours-list"><div class="tours"> <img class="tours-img" src="resrc/images/rental.png" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Buggy Adventure Polaris RZR 1000CC</div><div class="tours-desc__desc">After your local guide picked you up from your hotel in a 4x4 Vehicle you will head off to the desert. After 45 minutes drive from Dubai you’ll be reached at Lahbab Red Dunes desert, you will get 20–25 minutes to relax. Restroom and toile ...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/rental.png" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Buggy Adventure Polaris RZR 1000CC</div><div class="tours-desc__desc">After your local guide picked you up from your hotel in a 4x4 Vehicle you will head off to the desert. After 45 minutes drive from Dubai you’ll be reached at Lahbab Red Dunes desert, you will get 20–25 minutes to relax. Restroom and toile ...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/rental.png" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Buggy Adventure Polaris RZR 1000CC</div><div class="tours-desc__desc">After your local guide picked you up from your hotel in a 4x4 Vehicle you will head off to the desert. After 45 minutes drive from Dubai you’ll be reached at Lahbab Red Dunes desert, you will get 20–25 minutes to relax. Restroom and toile ...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/rental.png" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Buggy Adventure Polaris RZR 1000CC</div><div class="tours-desc__desc">After your local guide picked you up from your hotel in a 4x4 Vehicle you will head off to the desert. After 45 minutes drive from Dubai you’ll be reached at Lahbab Red Dunes desert, you will get 20–25 minutes to relax. Restroom and toile ...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"><div class="tours"> <img class="tours-img" src="resrc/images/rental.png" alt="" width="220" height="179"><div class="tours-desc"><div class="tours-desc__title">Buggy Adventure Polaris RZR 1000CC</div><div class="tours-desc__desc">After your local guide picked you up from your hotel in a 4x4 Vehicle you will head off to the desert. After 45 minutes drive from Dubai you’ll be reached at Lahbab Red Dunes desert, you will get 20–25 minutes to relax. Restroom and toile ...</div><div class="tours-desc__feats"><div class="tours-desc__feat"><svg class="clock icon"><use xlink:href="resrc/icons/sprite.svg#clock"></use></svg><span>4 hr</span></div><div class="tours-desc__feat"><svg class="money icon"><use xlink:href="resrc/icons/sprite.svg#money"></use></svg><span>AED 299</span></div></div></div><div class="tours-btns"><a href="">read more</a><button>Book NOW</button></div></div><hr class="tours__hr"></div></div></div></section></main><footer> <div class="contacts-map"><div class="contacts"><div class="contacts__title">Rental vehicles in Cyprus </div><div class="contacts__descr">Galateias Zinonos 13, 8015, Paphos, Cyprus</div><div class="contacts__phone"> <a href="tel:+">+ 357 12345678</a><a href="tel:+">+ 357 12345678</a></div><div class="contacts__mail">s.t.solonos.123@yandex.ru</div><div class="contacts__net"><svg class="insta icon"><use xlink:href="resrc/icons/sprite.svg#insta"></use></svg><svg class="facebook icon"><use xlink:href="resrc/icons/sprite.svg#facebook"></use></svg></div></div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d457990.1535320761!2d32.881320358165524!3d35.04497768568316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1630431755693!5m2!1sru!2sru" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div><div class="footer-nav"> <img src="resrc/icons/logo.svg" alt=""><nav> <a href="">HOME</a><a href="">BOOK ONLINE</a><a href="">GALLERY</a><a href="">CONTACTS</a><a href="">FAQ</a></nav><a class="phone" href="tel:+35712345678">+ 357 12345678</a></div></footer><script src="./resrc/features.js" defer> </script></body></html>
