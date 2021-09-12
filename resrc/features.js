@@ -58,6 +58,19 @@ document.addEventListener( "DOMContentLoaded", function(){
   })
 });
 
+//image gallery (gallery page)
+document.addEventListener( "DOMContentLoaded", function(){ 
+  let galleryPage = document.getElementById("gallery"); 
+  !!galleryPage 
+  Fancybox.bind(".gallery-line img", {
+    Toolbar: {
+      display: "close",
+    },
+    Thumbs: {
+      autoStart: "false",
+    },
+  });
+});
 
 
 

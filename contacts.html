@@ -13,6 +13,10 @@
   padding: 0 150px;
   margin: 0 auto; }
 
+.mini-container {
+  padding: 0 80px;
+  margin: 0 auto; }
+
 body {
   font-family: "OpenSansR";
   color: #414141; }
@@ -372,6 +376,134 @@ section.choose-excur .btns-line {
       color: #414141;
       background: none; }
 
+section.cart .cart-description__title {
+  margin: 40px 0 20px;
+  font-family: "RobotoM";
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.05em; }
+
+section.cart .cart-description__text {
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.03em; }
+  section.cart .cart-description__text p {
+    margin-bottom: 20px; }
+    section.cart .cart-description__text p:last-child {
+      margin-bottom: 0; }
+  section.cart .cart-description__text li {
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 20px; }
+    section.cart .cart-description__text li:last-child {
+      margin-bottom: 0; }
+    section.cart .cart-description__text li::before {
+      position: absolute;
+      top: 8px;
+      left: 0px;
+      display: inline-block;
+      content: "";
+      width: 3px;
+      height: 4px;
+      border-radius: 50%;
+      background: #414141; }
+
+section.cart .read-terms {
+  margin-top: 30px;
+  display: flex; }
+  section.cart .read-terms p,
+  section.cart .read-terms a {
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.03em; }
+  section.cart .read-terms a {
+    font-family: "OpenSansB";
+    color: #d2ccbe;
+    text-decoration: underline; }
+    section.cart .read-terms a:hover {
+      color: #414141; }
+  section.cart .read-terms svg {
+    fill: #d2ccbe;
+    width: 7px;
+    height: 20px;
+    margin-right: 10px; }
+
+section.cart .book-now {
+  display: block;
+  box-sizing: border-box;
+  padding: 12px 29px;
+  font-family: "RobotoM";
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #7a7363;
+  margin: 50px 0 80px 0;
+  width: fit-content; }
+  section.cart .book-now:hover {
+    background: #d2ccbe; }
+
+section.cart .cart-parts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px; }
+
+section.cart .cart-parts__aside {
+  margin-left: 40px; }
+
+section.cart .cart-aside__title {
+  font-family: "OpenSansSB";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.06em; }
+
+section.cart .cart-aside__tours .tours {
+  padding: 10px 0; }
+
+section.cart .cart-aside__tours .tours-img {
+  width: 120px;
+  height: 98px; }
+
+section.cart .cart-aside__tours .tours-desc {
+  margin-left: 10px;
+  margin-right: 0px; }
+
+section.cart .cart-aside__tours .tours-desc__feat:first-child {
+  display: none; }
+
+section.cart .cart-aside__tours .tours-desc__title {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.06em;
+  opacity: 0.8; }
+
+section.cart .cart-aside__tours .tours-desc__desc,
+section.cart .cart-aside__tours .tours-btns {
+  display: none; }
+
+section.cart .cart-aside__tours .tours__hr {
+  width: calc(100% + 20px);
+  margin-left: -10px; }
+
+section.cart .cart-line-img {
+  height: 420px;
+  display: flex;
+  justify-content: space-between; }
+  section.cart .cart-line-img img {
+    object-fit: cover; }
+
+section.cart .cart-line-img__main {
+  height: 100%;
+  width: 75%; }
+
+section.cart .cart-line-img__mini {
+  width: calc(25% - 20px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
+
 .page-contacts-map {
   margin-bottom: -5px;
   margin-top: -5px; }
@@ -446,6 +578,22 @@ section.faq .answ {
   font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.03em; }
+
+.gallery h2 {
+  text-align: start;
+  margin: 40px 0 20px 0; }
+
+.gallery .gallery-line {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px; }
+  .gallery .gallery-line img {
+    margin: 20px 0;
+    height: 261px;
+    width: calc((100% - 80px) / 3);
+    object-fit: cover;
+    cursor: pointer; }
 
 header,
 .footer-nav {
